@@ -3,7 +3,7 @@ import EducationAndExperiance from './educationAndExperiance'
 
 const AboutMe = () => {
 
-
+    
 
     return (
         <div className='about-me'>

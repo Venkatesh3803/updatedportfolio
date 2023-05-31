@@ -50,7 +50,7 @@ button:hover {
     object-fit: cover;
     border-radius: 50%;
     cursor: pointer;
-    border: 2px solid rgb(248, 248, 244);
+    border: 2px solid blue;
 }
 
 
@@ -119,6 +119,48 @@ button:hover {
     font-size: 0.9rem;
     color: rgb(207, 204, 204);
 }
+
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-links {
+    width: 50px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.social-links:hover {
+    transform: rotateZ(10deg)
+}
+
+.facebook:hover {
+    color: #1877F2;
+}
+
+.instagram:hover {
+    color: #ed9837;
+}
+
+.linkedin:hover {
+    color: #8169fb;
+}
+
+.twiter:hover {
+    color: #381bc7;
+}
+
+
 
 
 

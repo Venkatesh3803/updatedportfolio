@@ -1,5 +1,6 @@
 import React from 'react'
-import project1 from "../images/0d373b57e250525e2556015c5ad6fe84f66f2f632357a97c5de6e73043c0e0d51628682335902.jpg"
+import project1 from "../images/pic1.jpg"
+import project2 from "../images/2023-05-27 (2).png"
 
 
 const projects = () => {
@@ -15,7 +16,7 @@ const projects = () => {
                     </div>
                 </div>
                 <div className="project-card">
-                    <img src={project1} alt="" />
+                    <img src={project2} alt="" />
                     <div className="btns">
                         <button>Github</button>
                         <button>Go Live</button>
