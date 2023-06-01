@@ -38,8 +38,8 @@ function App() {
       <div className="right">
         <Hero />
         <AboutMe />
-        <Projects />
         <Services />
+        <Projects />
         <Contact />
       </div>
     </div>
