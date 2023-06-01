@@ -23,6 +23,7 @@ button:hover {
     background-color: rgb(211, 208, 208);
 }
 
+
 .app {
     display: flex;
     position: relative;
@@ -66,7 +67,8 @@ button:hover {
 }
 
 .links li {
-    padding: 10px 12px;
+    width: 100%;
+    padding: 10px;
     background-color: gray;
     border-radius: 8px;
     font-size: 18px;
@@ -92,7 +94,7 @@ button:hover {
     display: none;
 }
 
-.hero {
+#hero {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -164,33 +166,33 @@ button:hover {
 
 
 
-.about-me,
-.services,
-.projects,
-.contact {
+#about-me,
+#services,
+#projects,
+#contact {
     width: 90%;
     display: block;
     margin: 3rem auto;
 }
 
-.about-me>h1,
-.services>h1,
-.projects>h1,
-.contact>h1 {
+#about-me>h1,
+#services>h1,
+#projects>h1,
+#contact>h1 {
     text-align: center;
     font-size: 2.5rem;
 }
 
-.about-me span,
-.services span,
-.projects span,
-.contact span {
+#about-me span,
+#services span,
+#projects span,
+#contact span {
     color: rgb(47, 0, 255);
 }
 
-.about-me>p,
-.services>p,
-.contact>p {
+#about-me>p,
+#services>p,
+#contact>p {
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -342,7 +344,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 400px;
     height: 30vh;
     background-color: rgb(40, 39, 39);
     margin-top: 2rem;
@@ -378,4 +380,76 @@ hr {
     background-color: rgba(0, 0, 0, 0.245);
     opacity: 1;
     cursor: pointer;
+}
+
+form {
+    padding: 3rem;
+    width: 80%;
+    display: block;
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.contact {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-container {
+    width: 100%;
+}
+
+.address-items {
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: space-around;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.form-inputs {
+    display: flex;
+    gap: 1rem;
+}
+
+input,
+textarea {
+    padding: 8px 12px;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid whitesmoke;
+}
+
+input:focus {
+    outline: none;
+}
+
+@media screen and (max-width : 480px) {
+    .left {
+        display: none;
+    }
+    h1{
+        font-size: 1px;
+    }
 }

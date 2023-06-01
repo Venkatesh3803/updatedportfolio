@@ -1,7 +1,11 @@
+import AboutMe from "./components/aboutMe";
+import Hero from "./components/hero";
 import Left from "./components/left";
-import Right from "./components/right";
 import AnimatedCursor from "react-animated-cursor"
-
+import Services from "./components/services";
+import Contact from "./components/contact";
+import Projects from "./components/projects";
+// import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -30,9 +34,14 @@ function App() {
           ".social-links"
         ]}
       />
-
       <Left />
-      <Right />
+      <div className="right">
+        <Hero />
+        <AboutMe />
+        <Projects />
+        <Services />
+        <Contact />
+      </div>
     </div>
   );
 }

@@ -6,9 +6,8 @@ const AboutMe = () => {
     
 
     return (
-        <div className='about-me'>
+        <div id='about-me'>
             <h1>About <span>Me</span></h1>
-            <hr />
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam veniam iure quam minus cupiditate possimus ea doloremque reprehenderit qui, sint dolore illum ipsa, commodi laudantium animi totam voluptatibus impedit. Beatae!</p>
             <div className="about-container">
                 <div className="about-left">

@@ -5,7 +5,7 @@ import project2 from "../images/2023-05-27 (2).png"
 
 const projects = () => {
     return (
-        <div className='projects'>
+        <div id='projects'>
             <h1><span>My</span> Projects</h1>
             <div className="project-container">
                 <div className="project-card">

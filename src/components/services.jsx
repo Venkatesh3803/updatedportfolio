@@ -6,7 +6,7 @@ import { ImMobile } from "react-icons/im"
 
 const Services = () => {
     return (
-        <div className='services'>
+        <div id='services'>
             <h1><span>Our</span> Services</h1>
 
             <div className="service-container">

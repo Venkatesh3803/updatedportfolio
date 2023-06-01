@@ -5,9 +5,8 @@ import { TypeAnimation } from 'react-type-animation'
 
 const Hero = () => {
     return (
-        <div className='hero'>
+        <div id='hero'>
             <div
-                
                 className="info">
                 <h3>Hey THERE !</h3>
                 <h1>I'm Chanda <span>Venkatesh</span></h1>
