@@ -1,55 +1,15 @@
 import React from 'react'
-import project1 from "../images/pic1.jpg"
-import project2 from "../images/2023-05-27 (2).png"
+import projectsData from '../data/projectsData'
+import Projectslider from './projectslider'
 
 
 const projects = () => {
     return (
         <div id='projects'>
             <h1><span>My</span> Projects</h1>
+            <h3>My Live Projects</h3>
             <div className="project-container">
-                <div className="project-card">
-                    <img src={project1} alt="" />
-                    <div className="btns">
-                        <button>Github</button>
-                        <button>Go Live</button>
-                    </div>
-                </div>
-                <div className="project-card">
-                    <img src={project2} alt="" />
-                    <div className="btns">
-                        <button>Github</button>
-                        <button>Go Live</button>
-                    </div>
-                </div>
-                <div className="project-card">
-                    <img src={project1} alt="" />
-                    <div className="btns">
-                        <button>Github</button>
-                        <button>Go Live</button>
-                    </div>
-                </div>
-                <div className="project-card">
-                    <img src={project1} alt="" />
-                    <div className="btns">
-                        <button>Github</button>
-                        <button>Go Live</button>
-                    </div>
-                </div>
-                <div className="project-card">
-                    <img src={project1} alt="" />
-                    <div className="btns">
-                        <button>Github</button>
-                        <button>Go Live</button>
-                    </div>
-                </div>
-                <div className="project-card">
-                    <img src={project1} alt="" />
-                    <div className="btns">
-                        <button>Github</button>
-                        <button>Go Live</button>
-                    </div>
-                </div>
+                <Projectslider projectsData = {projectsData}/>
             </div>
         </div>
     )

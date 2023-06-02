@@ -5,7 +5,7 @@ import AnimatedCursor from "react-animated-cursor"
 import Services from "./components/services";
 import Contact from "./components/contact";
 import Projects from "./components/projects";
-// import { Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (

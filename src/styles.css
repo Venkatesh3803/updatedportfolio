@@ -340,46 +340,52 @@ hr {
     background-color: blue;
 }
 
-.project-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 400px;
-    height: 30vh;
-    background-color: rgb(40, 39, 39);
-    margin-top: 2rem;
-    border-radius: 8px;
+#projects h3 {
+    width: fit-content;
+    border-bottom: 2px solid blue;
+    margin: 1rem 0;
+    padding: 0.5em 0;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 40vh;
+}
+
+
+.swiper-slide {
+    border-radius: 10px;
     overflow: hidden;
-    position: relative;
 }
 
-.project-card img {
+.swiper-slide img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 
 
-
-.btns {
+.swiper-slide .slider-btns {
     z-index: 5;
-    position: absolute;
-    width: 100%;
-    height: 100%;
     display: flex;
     gap: 10px;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
+    justify-content: space-between;
     transition: 0.3s ease;
+    z-index: 5;
+    margin-bottom: 5px;
 }
 
-.btns:hover {
-    z-index: 5;
-    background-color: rgba(0, 0, 0, 0.245);
-    opacity: 1;
-    cursor: pointer;
+.swiper-slide .slider-btns button {
+    padding: 8px;
+    background-color: rgb(69, 69, 248);
+    color: white;
+}
+
+.swiper-slide .slider-btns h1 {
+    font-size: 22px;
+    color: white;
 }
 
 form {
@@ -449,7 +455,8 @@ input:focus {
     .left {
         display: none;
     }
-    h1{
+
+    h1 {
         font-size: 1px;
     }
 }
