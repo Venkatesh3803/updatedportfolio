@@ -1,6 +1,6 @@
 import React from 'react'
 import profilePic from "../images/Screenshot_2020-09-07-12-32-36-259_com.whatsapp-removebg-preview.png"
-import { Link } from 'react-router-dom'
+
 import { MdCancel } from "react-icons/md"
 
 
@@ -13,7 +13,6 @@ const Navber = ({ setActive, active }) => {
 
             {active && <MdCancel onClick={() => setActive(false)} className='cancel-icon' />}
 
-
             <div className="profile">
                 <img src={profilePic} alt="" />
                 <h2>Chanda Venkatesh</h2>
@@ -22,21 +21,21 @@ const Navber = ({ setActive, active }) => {
 
             <div className="links">
                 <ul>
-                    <Link to={"#"} style={{ textDecoration: "none", color: "white" }}>
+                    <a href="#hero" style={{ textDecoration: "none", color: "white" }}>
                         <li>Home</li>
-                    </Link>
-                    <Link to={"#about"} style={{ textDecoration: "none", color: "white" }}>
+                    </a>
+                    <a href="#about-me" style={{ textDecoration: "none", color: "white" }}>
                         <li>About Me</li>
-                    </Link>
-                    <Link to={"#servies"} style={{ textDecoration: "none", color: "white" }}>
+                    </a>
+                    <a href="#services" style={{ textDecoration: "none", color: "white" }}>
                         <li>Servies</li>
-                    </Link>
-                    <Link to={"#projects"} style={{ textDecoration: "none", color: "white" }}>
+                    </a>
+                    <a href="#projects" style={{ textDecoration: "none", color: "white" }}>
                         <li>Projects</li>
-                    </Link>
-                    <Link to={"#contact"} style={{ textDecoration: "none", color: "white" }}>
+                    </a>
+                    <a href="#contact" style={{ textDecoration: "none", color: "white" }}>
                         <li>Contact</li>
-                    </Link>
+                    </a>
 
                 </ul>
             </div>

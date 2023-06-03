@@ -8,6 +8,7 @@ import Projects from "./components/projects";
 import { useState } from "react";
 
 
+
 function App() {
 
   const [active, setActive] = useState(false)
@@ -39,9 +40,11 @@ function App() {
         ]}
       />
 
-      <Left active={active} setActive={setActive} />
+
+
+      <Left active={active} setActive={setActive}/>
       <div className="right">
-        <Hero active={active} setActive={setActive} />
+        <Hero active={active} setActive={setActive}/>
         <AboutMe />
         <Services />
         <Projects />

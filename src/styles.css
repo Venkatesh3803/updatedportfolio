@@ -4,6 +4,8 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -307,6 +309,11 @@ hr {
 }
 
 
+#projects{
+    height: 100vh;
+}
+
+
 .service-container,
 .project-container {
     display: flex;
@@ -485,9 +492,22 @@ input:focus {
         transition: 0.4s ease-in-out;
         padding: 1rem;
     }
-    .profile img{
-     width: 150px;
-     height: 150px;
+
+    .profile img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-right {
+        padding: 0.5rem 0;
+    }
+
+    .about-left {
+        padding: 0.5rem;
+    }
+
+    #about-me {
+        padding: 0;
     }
 
     .active {
