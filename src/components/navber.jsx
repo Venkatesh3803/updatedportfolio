@@ -1,11 +1,19 @@
 import React from 'react'
 import profilePic from "../images/Screenshot_2020-09-07-12-32-36-259_com.whatsapp-removebg-preview.png"
 import { Link } from 'react-router-dom'
+import { MdCancel } from "react-icons/md"
 
-const Navber = () => {
+
+const Navber = ({ setActive, active }) => {
+
+
 
     return (
-        <div className='navber'>
+        <div className="navber">
+
+            {active && <MdCancel onClick={() => setActive(false)} className='cancel-icon' />}
+
+
             <div className="profile">
                 <img src={profilePic} alt="" />
                 <h2>Chanda Venkatesh</h2>

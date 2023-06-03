@@ -1,22 +1,23 @@
 import React from 'react'
-import { AiFillFacebook, AiFillLinkedin, AiFillInstagram, AiFillGithub, AiFillTwitterSquare } from "react-icons/ai"
+import { AiFillFacebook, AiFillLinkedin, AiFillInstagram, AiFillGithub, AiFillTwitterSquare, AiOutlineMenu } from "react-icons/ai"
 import { TypeAnimation } from 'react-type-animation'
 
 
-const Hero = () => {
+const Hero = ({ setActive, active }) => {
     return (
         <div id='hero'>
             <div
                 className="info">
+                <AiOutlineMenu onClick={() => setActive(!active)} className="menu-icon" />
                 <h3>Hey THERE !</h3>
                 <h1>I'm Chanda <span>Venkatesh</span></h1>
                 <h2>Expert in  <TypeAnimation
                     sequence={[
                         'Full Stact Developer', // Types 'One'
                         1000, // Waits 1s
-                        'Web Developer ', // Deletes 'One' and types 'Two'
+                        'Web Developer ',
                         2000, // Waits 2s
-                        'Web Designer', // Types 'Three' without deleting 'Two'
+                        'Web Designer',
                     ]}
                     wrapper="span"
                     cursor={true}

@@ -5,9 +5,13 @@ import AnimatedCursor from "react-animated-cursor"
 import Services from "./components/services";
 import Contact from "./components/contact";
 import Projects from "./components/projects";
+import { useState } from "react";
 
 
 function App() {
+
+  const [active, setActive] = useState(false)
+
   return (
     <div className="app">
 
@@ -34,9 +38,10 @@ function App() {
           ".social-links"
         ]}
       />
-      <Left />
+
+      <Left active={active} setActive={setActive} />
       <div className="right">
-        <Hero />
+        <Hero active={active} setActive={setActive} />
         <AboutMe />
         <Services />
         <Projects />

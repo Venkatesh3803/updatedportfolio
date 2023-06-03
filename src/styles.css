@@ -28,14 +28,17 @@ button:hover {
     display: flex;
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 
 .left {
     flex: 1;
     background-color: rgb(65, 68, 67);
+    position: relative;
     width: 100%;
     padding: 4rem 2rem;
     color: white;
+    z-index: 10;
 }
 
 .profile {
@@ -204,6 +207,7 @@ hr {
 .about-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     height: 90%;
 }
 
@@ -238,6 +242,7 @@ hr {
     gap: 1.5rem;
     flex-direction: column;
     padding: 1.5rem;
+
 }
 
 .progress-bar {
@@ -262,6 +267,7 @@ hr {
 
 .edu-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .edu-left,
@@ -414,8 +420,8 @@ form {
 }
 
 .address-items {
-
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
     margin-bottom: 2rem;
@@ -451,12 +457,66 @@ input:focus {
     outline: none;
 }
 
-@media screen and (max-width : 480px) {
+
+
+.menu-icon {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    color: white;
+    font-size: 35px;
+    z-index: 9;
+}
+
+.cancel-icon {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: white;
+    font-size: 35px;
+
+}
+
+@media screen and (max-width : 780px) {
     .left {
-        display: none;
+        position: absolute;
+        left: -290px;
+        width: 290px;
+        transition: 0.4s ease-in-out;
+        padding: 1rem;
+    }
+    .profile img{
+     width: 150px;
+     height: 150px;
     }
 
-    h1 {
-        font-size: 1px;
+    .active {
+        position: absolute;
+        left: 0;
+        width: 290px;
+        z-index: 10;
+        height: 100vh;
     }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-right {
+        width: 90%;
+    }
+
+    form {
+        width: 95%;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .service-card {
+        padding: 1rem;
+        height: 40vh;
+    }
+
 }

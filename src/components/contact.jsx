@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai"
-import { GrLocation } from "react-icons/gr"
+import { ImLocation } from "react-icons/im"
 
 const Contact = () => {
     return (
@@ -20,7 +20,7 @@ const Contact = () => {
                         <p>venkateshvnky3803@gmail.com</p>
                     </div>
                     <div className="address">
-                        <GrLocation className='icons' style={{ border: "none" }} />
+                        <ImLocation className='icons' style={{ border: "none" }} />
                         <h3>Location</h3>
                         <p>Uppal, Hyderabad</p>
                     </div>

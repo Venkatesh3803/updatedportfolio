@@ -17,6 +17,7 @@ const Projectslider = ({ projectsData }) => {
                 pauseOnMouseEnter: true,
                 delay: 3000
             }}
+    
 
         >
             {

@@ -1,10 +1,10 @@
 import React from 'react'
 import Navber from './navber'
 
-const Left = () => {
+const Left = ({ active, setActive }) => {
     return (
-        <div className='left'>
-            <Navber />
+        <div className={active ? "left active" : "left"}>
+            <Navber active={active} setActive={setActive} />
         </div>
     )
 }
