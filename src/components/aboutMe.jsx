@@ -1,16 +1,47 @@
 import React from 'react'
 import EducationAndExperiance from './educationAndExperiance'
 
+import { motion } from "framer-motion"
+import { fadeIn, staggerContainer } from '../animations/framermotion'
+
 const AboutMe = () => {
 
+    const Stats = [
+        {
+            skills: "HTML",
+            percent: 80
+        },
+        {
+            skills: "CSS",
+            percent: 90
+        },
+        {
+            skills: "JAVA SCRIPT",
+            percent: 80
+        },
+        {
+            skills: "REACT JS",
+            percent: 75
+        },
+        {
+            skills: "NEXT JS",
+            percent: 60
+        },
 
+    ]
 
     return (
-        <div id='about-me'>
+        <motion.div id='about-me'
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.25 }}>
             <h1>About <span>Me</span></h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam veniam iure quam minus cupiditate possimus ea doloremque reprehenderit qui, sint dolore illum ipsa, commodi laudantium animi totam voluptatibus impedit. Beatae!</p>
+            <p>I am a quick learner, and possess strong problem-solving skills. I am eager to collaborate with experienced professionals, learn from their expertise, and contribute to the development of innovative web applications. With a strong work ethic, a drive to continuously learn, and a determination to excel in the field, I am confident in my ability to grow as a skilled Full Stack Developer and make a positive impact in the industry.</p>
             <div className="about-container">
-                <div className="about-left">
+                <motion.div
+                    variants={fadeIn("right", "tween", 0.5, 1)}
+                    className="about-left">
                     <ul>
                         <li>
                             <h4>Name: </h4>
@@ -38,48 +69,24 @@ const AboutMe = () => {
                         </li>
                         <button>Download CV</button>
                     </ul>
-                </div>
+                </motion.div>
                 <div className="about-right">
-                    <div className="progress-bar">
-                        <h3>HTML</h3>
-                        <div className="progressbar-inputs">
-                            <input type="range" value={90} />
-                            <label htmlFor="">90%</label>
-                        </div>
-                    </div>
-                    <div className="progress-bar">
-                        <h3>Css</h3>
-                        <div className="progressbar-inputs">
-                            <input type="range" value={90} />
-                            <label htmlFor="">90%</label>
-                        </div>
-                    </div>
-                    <div className="progress-bar">
-                        <h3>JavaScript</h3>
-                        <div className="progressbar-inputs">
-                            <input type="range" value={80} />
-                            <label htmlFor="">80%</label>
-                        </div>
-                    </div>
-                    <div className="progress-bar">
-                        <h3>React JS</h3>
-                        <div className="progressbar-inputs">
-                            <input type="range" value={80} />
-                            <label htmlFor="">80%</label>
-                        </div>
-                    </div>
-                    <div className="progress-bar">
-                        <h3>Node Js</h3>
-                        <div className="progressbar-inputs">
-                            <input type="range" value={80} />
-                            <label htmlFor="">80%</label>
-                        </div>
-                    </div>
+                    {Stats.map((s, i) => {
+                        return (
+                            <motion.div variants={fadeIn("left", "tween", (i + 1) * 0.2, 1)} className="progress-bar" key={s.id}>
+                                <h3>{s.skills}</h3>
+                                <div className="progressbar-inputs">
+                                    <input type="range" value={s.percent} />
+                                    <label htmlFor="">{s.percent}%</label>
+                                </div>
+                            </motion.div>
 
+                        )
+                    })}
                 </div>
             </div>
             <EducationAndExperiance />
-        </div>
+        </motion.div>
     )
 }
 

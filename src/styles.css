@@ -200,6 +200,8 @@ button:hover {
 #contact>p {
     margin-bottom: 2rem;
     text-align: center;
+    font-size: 0.9rem;
+    color: rgb(207, 204, 204);
 }
 
 hr {
@@ -473,6 +475,7 @@ input:focus {
     color: white;
     font-size: 35px;
     z-index: 9;
+    display: none;
 }
 
 .cancel-icon {
@@ -508,6 +511,10 @@ input:focus {
 
     #about-me {
         padding: 0;
+    }
+
+    .menu-icon{
+        display: block;
     }
 
     .active {

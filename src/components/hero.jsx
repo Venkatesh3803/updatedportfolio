@@ -1,12 +1,18 @@
 import React from 'react'
 import { AiFillFacebook, AiFillLinkedin, AiFillInstagram, AiFillGithub, AiFillTwitterSquare, AiOutlineMenu } from "react-icons/ai"
 import { TypeAnimation } from 'react-type-animation'
+import { motion } from "framer-motion"
+import { HeroSection } from '../animations/framermotion'
 
 
 const Hero = ({ setActive, active }) => {
     return (
         <div id='hero'>
-            <div
+            <motion.div
+                variants={HeroSection}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.25 }}
                 className="info">
                 <AiOutlineMenu onClick={() => setActive(!active)} className="menu-icon" />
                 <h3>Hey THERE !</h3>
@@ -26,7 +32,7 @@ const Hero = ({ setActive, active }) => {
                 />
                 </h2>
 
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, voluptate aperiam! Inventore, fuga ipsum eveniet adipisci necessitatibus nihil debitis atque eaque numquam saepe cum molestiae veritatis, voluptatem ab? Id, obcaecati.</p>
+                <p>As a Fresher Full Stack Developer, I am an enthusiastic and motivated individual with a passion for web development. I have recently entered the field and possess a solid foundation in both front-end and back-end technologies. I am excited to embark on this journey to expand my knowledge and gain practical experience in building robust and dynamic web applications.</p>
 
                 <div className="social-media">
                     <div className="social-links">
@@ -46,7 +52,7 @@ const Hero = ({ setActive, active }) => {
                     </div>
                 </div>
                 <button> About Me</button>
-            </div>
+            </motion.div>
         </div>
     )
 }
