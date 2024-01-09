@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react'
 import projectData from "../data/projectsData"
 
 const ProjectPage = () => {
-    const projectId = window.location.pathname.split("/")[2]
+    const projectId =parseInt(window.location.pathname.split("/")[2])
     const [data, setData] = useState("")
+    
     useEffect(() => {
-        setData(projectData.find((project) => project.id == projectId))
+        setData(projectData.find((project) => project.id === projectId))
 
     }, [projectId])
-
+console.log(typeof(projectId))
     return (
         <div className='project-page'>
             <h1>{data.title}</h1>
