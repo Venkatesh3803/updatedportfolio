@@ -6,8 +6,8 @@ import Services from "./components/services";
 import Contact from "./components/contact";
 import Projects from "./components/projects";
 import { useState } from "react";
-
-
+import { Route, Routes } from "react-router-dom"
+import ProjectPage from "./components/projectPage";
 
 function App() {
 
@@ -40,15 +40,24 @@ function App() {
         ]}
       />
 
+      {/* <BsToggleOn className="togglenpm" size={55}/> */}
 
-
-      <Left active={active} setActive={setActive}/>
+      <Left active={active} setActive={setActive} />
       <div className="right">
-        <Hero active={active} setActive={setActive}/>
-        <AboutMe />
-        <Services />
-        <Projects />
-        <Contact />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero active={active} setActive={setActive} />
+              <AboutMe />
+              <Services />
+              <Projects />
+              <Contact />
+            </>
+          } />
+
+          <Route path="/project/:id" element={<ProjectPage />} />
+
+        </Routes>
       </div>
     </div>
   );

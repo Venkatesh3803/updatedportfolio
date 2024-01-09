@@ -15,28 +15,35 @@ const Projectslider = ({ projectsData }) => {
             onSliderMove={{ visualViewport }}
             autoplay={{
                 pauseOnMouseEnter: true,
-                delay: 3000
+                delay: 2000
             }}
-    
-
         >
             {
                 projectsData.map((project) => {
                     return (
-                        <SwiperSlide key={project.id} style={{ width: "100%" }}>
+                        <SwiperSlide key={project.id} style={{ width: "100%" }} >
 
                             <div className="slider-btns">
                                 <h1>{project.title}</h1>
+
                                 <div className="btns">
-                                    <Link to="https://github.com/Venkatesh3803/reactTMDBclone" target='_blank'>
+                                    <Link to={project.gitHub} target='_blank'>
                                         <button>Github</button>
                                     </Link>
-                                    <Link to="https://tmdbclone2.netlify.app/" target='_blank'>
+                                    <Link to={project.liveProject} target='_blank'>
                                         <button>Go Live</button>
                                     </Link>
                                 </div>
                             </div>
-                            <img src={project.image} alt={project.title} />
+
+                            <p style={{marginBottom:"10px"}}>technology :- {project.technologies}</p>
+
+
+                            <Link to={`project/${project
+                                .id}`}>
+
+                                <img src={project.image} alt={project.title} />
+                            </Link>
                         </SwiperSlide>
                     )
                 })

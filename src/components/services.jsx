@@ -14,7 +14,7 @@ const Services = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
         >
-            <h1><span>Our</span> Services</h1>
+            <h1><span>Kown</span> Technologies</h1>
 
             <div className="service-container">
                 <motion.div 

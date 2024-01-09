@@ -8,25 +8,30 @@ const AboutMe = () => {
 
     const Stats = [
         {
-            skills: "HTML",
+            skills: "REACT JS",
             percent: 80
-        },
-        {
-            skills: "CSS",
-            percent: 90
         },
         {
             skills: "JAVA SCRIPT",
             percent: 80
         },
         {
-            skills: "REACT JS",
+            skills: "NODE JS",
+            percent: 90
+        },
+        {
+            skills: "EXPRESS",
+            percent: 80
+        },
+        {
+            skills: "MONGO DB",
             percent: 75
         },
         {
-            skills: "NEXT JS",
+            skills: "REDIS SERVER",
             percent: 60
         },
+       
 
     ]
 
@@ -46,10 +51,6 @@ const AboutMe = () => {
                         <li>
                             <h4>Name: </h4>
                             <p>Chanda Venkatesh </p>
-                        </li>
-                        <li>
-                            <h4>Age: </h4>
-                            <p>24</p>
                         </li>
                         <li>
                             <h4>Qualification: </h4>

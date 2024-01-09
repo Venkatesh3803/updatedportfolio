@@ -8,7 +8,7 @@ const EducationAndExperiance = () => {
             id: 1,
             college: "Mahaveer Insitute Of Science And Technologies",
             location: " Bandlaguda, Hydrabad",
-            ecadamicYear: "2015-2019",
+            // ecadamicYear: "2015-2019",
             course: "Civil Engnieering",
             grades: 50,
         },
@@ -16,17 +16,17 @@ const EducationAndExperiance = () => {
             id: 2,
             college: "Narayana Junior College",
             location: " Madinaguda, Hydrabad",
-            ecadamicYear: "2014-2015",
+            // ecadamicYear: "2014-2015",
             course: "MPC",
             grades: 85.3,
         },
-        {
-            id: 3,
-            college: "Prince English Medium High School",
-            location: " Nirmal",
-            ecadamicYear: "2013",
-            grades: 60,
-        },
+        // {
+        //     id: 3,
+        //     college: "Prince English Medium High School",
+        //     location: " Nirmal",
+        //     ecadamicYear: "2013",
+        //     grades: 60,
+        // },
     ]
 
 
@@ -51,7 +51,6 @@ const EducationAndExperiance = () => {
                                 <div className="edu-info">
                                     <h3>{e.college}</h3>
                                     <h4 style={{ color: "gray" }}>{e.location}</h4>
-                                    <h4 style={{ color: "gray" }}>{e.ecadamicYear}</h4>
                                     <p>Percentile : {e.grades}%</p>
                                     <p>Coures : {e.course}</p>
                                 </div>
@@ -63,14 +62,14 @@ const EducationAndExperiance = () => {
                 <motion.div
                     variants={fadeIn("left", "tween", 0.5, 1)}
                     className="edu-right">
-                    <h2>Experiance</h2>
+                    <h2>Certifications </h2>
                     <div className="edu-card">
                         <div className="vl"></div>
                         <div className="dot"></div>
                         <div className="edu-info">
-                            <h3>College</h3>
-                            <h4>PAss Year</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem incidunt veniam tempore facilis sint repudiandae perspiciatis dicta sunt obcaecati nobis.</p>
+                            <h3>UpGrad</h3>
+                            <p>Feb 2023 - oct 2023</p>
+                            <p>Full Stack Development- (JavaScript)</p>
                         </div>
                     </div>
                 </motion.div>
