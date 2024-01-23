@@ -14,7 +14,7 @@ const Services = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
         >
-            <h1><span>Kown</span> Technologies</h1>
+            <h1><span>Known</span> Technologies</h1>
 
             <div className="service-container">
                 <motion.div 
@@ -29,7 +29,7 @@ const Services = () => {
                 className="service-card">
                     <DiReact className='icons' />
                     <h3>React Js</h3>
-                    <p> Experience with common front-end development tools such as Babel, Webpack, NPM</p>
+                    <p> Developing dynamic and user-friendly interfaces</p>
                 </motion.div>
                 <motion.div 
                 variants={fadeIn("left", "tween", 0.6, 1)}

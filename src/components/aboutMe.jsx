@@ -1,8 +1,9 @@
 import React from 'react'
 import EducationAndExperiance from './educationAndExperiance'
-
 import { motion } from "framer-motion"
 import { fadeIn, staggerContainer } from '../animations/framermotion'
+
+import resume from "../resume/resume.pdf"
 
 const AboutMe = () => {
 
@@ -31,9 +32,20 @@ const AboutMe = () => {
             skills: "REDIS SERVER",
             percent: 60
         },
-       
+
 
     ]
+
+
+    const handleResume = (e) => {
+        const resumePath = resume;
+        const link = document.createElement('a');
+        link.href = resumePath;
+        link.download = "venkatesh-resume.pdf";
+
+        link.click()
+
+    }
 
     return (
         <motion.div id='about-me'
@@ -68,7 +80,7 @@ const AboutMe = () => {
                             <h4>Phone: </h4>
                             <p>+91 8463944069 </p>
                         </li>
-                        <button>Download CV</button>
+                        <button onClick={handleResume}>Download Resume</button>
                     </ul>
                 </motion.div>
                 <div className="about-right">

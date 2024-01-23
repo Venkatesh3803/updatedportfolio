@@ -51,7 +51,9 @@ const Hero = ({ setActive, active }) => {
                         <AiFillTwitterSquare className='twiter' size={30} />
                     </div>
                 </div>
-                <button> About Me</button>
+                <a href="#about-me">
+                    <button> About Me</button>
+                </a>
             </motion.div>
         </div>
     )

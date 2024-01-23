@@ -1,6 +1,6 @@
 import React from 'react'
 import projectsData from '../data/projectsData'
-import Projectslider from './projectslider'
+import ProjectDetails from './ProjectDetails'
 
 
 const projects = () => {
@@ -9,7 +9,11 @@ const projects = () => {
             <h1><span>My</span> Projects</h1>
             <h3>My Live Projects</h3>
             <div className="project-container">
-                <Projectslider projectsData = {projectsData}/>
+                {projectsData.map((project) => {
+                    return (
+                        <ProjectDetails projectsData={project} />
+                    )
+                })}
             </div>
         </div>
     )

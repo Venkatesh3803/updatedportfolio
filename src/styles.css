@@ -25,11 +25,12 @@ button:hover {
     background-color: rgb(211, 208, 208);
 }
 
-.toggle{
+.toggle {
     position: absolute;
     top: 0%;
     right: 15px;
 }
+
 .app {
     display: flex;
     position: relative;
@@ -179,8 +180,8 @@ button:hover {
 #about-me,
 #services,
 #projects,
-#contact ,
-.project-page{
+#contact,
+.project-page {
     width: 90%;
     display: block;
     margin: 3rem auto;
@@ -318,9 +319,9 @@ hr {
 }
 
 
-#projects{
+/* #projects {
     height: 80vh;
-}
+} */
 
 
 .service-container,
@@ -328,7 +329,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 
@@ -494,22 +495,42 @@ input:focus {
 
 }
 
-.project-page{
+.project-page {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.project-page .desc{
+.project-page .desc {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.project-page .desc p{
-font-size: 15px;
-color: rgb(203, 200, 200);
+
+.project-page .desc p {
+    font-size: 15px;
+    color: rgb(203, 200, 200);
 }
 
+
+.project-details {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 60vh;
+}
+
+.project-details-top img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-details-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
 @media screen and (max-width : 780px) {
     .left {
@@ -537,7 +558,7 @@ color: rgb(203, 200, 200);
         padding: 0;
     }
 
-    .menu-icon{
+    .menu-icon {
         display: block;
     }
 
@@ -568,6 +589,10 @@ color: rgb(203, 200, 200);
     .service-card {
         padding: 1rem;
         height: 40vh;
+    }
+
+    .project-details {
+        width: 100%;
     }
 
 }

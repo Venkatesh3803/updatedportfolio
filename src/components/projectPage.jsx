@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import projectData from "../data/projectsData"
+import { Link } from 'react-router-dom'
 
 const ProjectPage = () => {
-    const projectId =parseInt(window.location.pathname.split("/")[2])
+    const projectId = parseInt(window.location.pathname.split("/")[2])
     const [data, setData] = useState("")
-    
+
     useEffect(() => {
         setData(projectData.find((project) => project.id === projectId))
 
     }, [projectId])
-console.log(typeof(projectId))
+
     return (
         <div className='project-page'>
             <h1>{data.title}</h1>
@@ -22,9 +23,18 @@ console.log(typeof(projectId))
                     )
                 })}
             </div>
-            <div className="btns">
-                <p>Github :- {data.gitHub}</p>
-                <p>Github :- {data.liveProject}</p>
+            <div className="btns" style={{backgroundColor:"white", padding:"20px", borderRadius:"8px", color:"black"}}>
+                <p>Github :-
+                    <Link to={data.gitHub} target='_blank'>
+                        {data.gitHub}
+                    </Link>
+                </p>
+                <p>Live  :-
+                    <Link to={data.liveProject} target='_blank'>
+                        {data.liveProject}
+                    </Link>
+                </p>
+
             </div>
         </div>
     )

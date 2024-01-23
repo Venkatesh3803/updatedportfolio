@@ -7,10 +7,11 @@ import { Link } from 'react-router-dom';
 const Projectslider = ({ projectsData }) => {
 
     return (
+
         <Swiper
-            modules={[Autoplay, FreeMode]}
+            modules={[Autoplay, FreeMode, ]}
             spaceBetween={50}
-            slidesPerView={2}
+            slidesPerView={1}
             freeMode={true}
             onSliderMove={{ visualViewport }}
             autoplay={{
