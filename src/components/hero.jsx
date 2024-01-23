@@ -37,7 +37,7 @@ const Hero = ({ setActive, active }) => {
 
                 <div className="social-media">
 
-                    <Link to={"www.linkedin.com/in/chanda-venkatesh-705154247/"} target='_blank'>
+                    <Link to={"https://www.linkedin.com/in/chanda-venkatesh-705154247"} target='_blank'>
                         <div className="social-links">
                             <AiFillLinkedin className='linkedin' size={30} />
                         </div>
