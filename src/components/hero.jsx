@@ -1,8 +1,9 @@
 import React from 'react'
-import { AiFillFacebook, AiFillLinkedin, AiFillInstagram, AiFillGithub, AiFillTwitterSquare, AiOutlineMenu } from "react-icons/ai"
+import { AiFillLinkedin, AiFillInstagram, AiFillGithub, AiOutlineMenu } from "react-icons/ai"
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from "framer-motion"
 import { HeroSection } from '../animations/framermotion'
+import { Link } from 'react-router-dom'
 
 
 const Hero = ({ setActive, active }) => {
@@ -35,21 +36,23 @@ const Hero = ({ setActive, active }) => {
                 <p>As a Fresher Full Stack Developer, I am an enthusiastic and motivated individual with a passion for web development. I have recently entered the field and possess a solid foundation in both front-end and back-end technologies. I am excited to embark on this journey to expand my knowledge and gain practical experience in building robust and dynamic web applications.</p>
 
                 <div className="social-media">
-                    <div className="social-links">
-                        <AiFillFacebook className='facebook' size={30} />
-                    </div>
-                    <div className="social-links">
-                        <AiFillLinkedin className='linkedin' size={30} />
-                    </div>
-                    <div className="social-links">
-                        <AiFillInstagram className='instagram' size={30} />
-                    </div>
-                    <div className="social-links">
-                        <AiFillGithub className='github' size={30} />
-                    </div>
-                    <div className="social-links">
-                        <AiFillTwitterSquare className='twiter' size={30} />
-                    </div>
+
+                    <Link to={"www.linkedin.com/in/chanda-venkatesh-705154247/"} target='_blank'>
+                        <div className="social-links">
+                            <AiFillLinkedin className='linkedin' size={30} />
+                        </div>
+                    </Link>
+                    <Link to={"https://www.instagram.com/venkat_venky3803/"} target='_blank'>
+                        <div className="social-links">
+                            <AiFillInstagram className='instagram' size={30} />
+                        </div>
+                    </Link>
+                    <Link to={"https://github.com/Venkatesh3803"} target='_blank'>
+                        <div className="social-links">
+                            <AiFillGithub className='github' size={30} />
+                        </div>
+                    </Link>
+
                 </div>
                 <a href="#about-me">
                     <button> About Me</button>

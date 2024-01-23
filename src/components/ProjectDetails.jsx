@@ -14,10 +14,10 @@ const ProjectDetails = ({ projectsData }) => {
             <div className="project-details-bottom">
                 <p>{projectsData.shortDesc.slice(0, 250)}</p>
                 <div className="btns">
-                    <Link to={projectsData.gitHub} target='_blank'>
+                    <Link to={projectsData.gitHub} target='_blank' >
                         <button>Github</button>
                     </Link>
-                    <Link to={projectsData.liveProject} target='_blank'>
+                    <Link to={projectsData.liveProject} target='_blank' >
                         <button>Go Live</button>
                     </Link>
 

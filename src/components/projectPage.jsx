@@ -25,12 +25,12 @@ const ProjectPage = () => {
             </div>
             <div className="btns" style={{backgroundColor:"white", padding:"20px", borderRadius:"8px", color:"black"}}>
                 <p>Github :-
-                    <Link to={data.gitHub} target='_blank'>
+                    <Link to={data.gitHub} target='_blank'style={{color:"blue"}}>
                         {data.gitHub}
                     </Link>
                 </p>
                 <p>Live  :-
-                    <Link to={data.liveProject} target='_blank'>
+                    <Link to={data.liveProject} target='_blank'style={{color:"blue"}}>
                         {data.liveProject}
                     </Link>
                 </p>

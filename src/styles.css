@@ -31,6 +31,10 @@ button:hover {
     right: 15px;
 }
 
+a{
+    color: white;
+}
+
 .app {
     display: flex;
     position: relative;
@@ -319,9 +323,7 @@ hr {
 }
 
 
-/* #projects {
-    height: 80vh;
-} */
+
 
 
 .service-container,
