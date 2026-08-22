@@ -22,12 +22,12 @@ const Contact = () => {
                     <div className="address">
                         <ImLocation className='icons' style={{ border: "none" }} />
                         <h3>Location</h3>
-                        <p>Uppal, Hyderabad</p>
+                        <p>Nirmal, Telangana</p>
                     </div>
                 </div>
 
                 <form action="">
-                    <h2>Mail me for Collabration</h2>
+                    <h2>Mail me for Collaboration</h2>
                     <div className="form-inputs">
                         <input type="text" placeholder='Name' name="" id="" />
                         <input type="email" placeholder='Email' name="" id="" />

@@ -1,10 +1,10 @@
 import React from 'react'
-import Navber from './navber'
+import Navbar from './Navbar'
 
 const Left = ({ active, setActive }) => {
     return (
         <div className={active ? "left active" : "left"}>
-            <Navber active={active} setActive={setActive} />
+            <Navbar active={active} setActive={setActive} />
         </div>
     )
 }

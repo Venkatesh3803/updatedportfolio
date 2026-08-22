@@ -1,39 +1,45 @@
 import React from 'react'
-import EducationAndExperiance from './educationAndExperiance'
+import EducationExperience from './EducationExperience'
 import { motion } from "framer-motion"
-import { fadeIn, staggerContainer } from '../animations/framermotion'
+import { fadeIn, staggerContainer } from '../../animations/framermotion'
 
-import resume from "../resume/resume.pdf"
+import resume from "../../assets/resume/resume.pdf"
 
 const AboutMe = () => {
 
     const Stats = [
         {
             skills: "REACT JS",
-            percent: 80
+            percent: 88
         },
         {
-            skills: "JAVA SCRIPT",
-            percent: 80
+            skills: "NEXT JS",
+            percent: 82
+        },
+        {
+            skills: "TYPE SCRIPT",
+            percent: 85
         },
         {
             skills: "NODE JS",
             percent: 90
         },
         {
-            skills: "EXPRESS",
-            percent: 80
+            skills: "EXPRESS JS",
+            percent: 86
         },
         {
             skills: "MONGO DB",
-            percent: 75
+            percent: 85
         },
         {
-            skills: "REDIS SERVER",
-            percent: 60
+            skills: "REDIS",
+            percent: 78
         },
-
-
+        {
+            skills: "TAILWIND CSS",
+            percent: 80
+        },
     ]
 
 
@@ -54,7 +60,7 @@ const AboutMe = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}>
             <h1>About <span>Me</span></h1>
-            <p>I am a quick learner, and possess strong problem-solving skills. I am eager to collaborate with experienced professionals, learn from their expertise, and contribute to the development of innovative web applications. With a strong work ethic, a drive to continuously learn, and a determination to excel in the field, I am confident in my ability to grow as a skilled Full Stack Developer and make a positive impact in the industry.</p>
+            <p>Full Stack Developer with 2+ years of experience building enterprise ERP applications using Node.js, Express.js, React.js, Next.js, TypeScript, and MongoDB. Skilled in designing secure REST APIs, optimizing performance with Redis and BullMQ, and delivering production-ready Purchase, Quality, and Sales & Inventory modules.</p>
             <div className="about-container">
                 <motion.div
                     variants={fadeIn("right", "tween", 0.5, 1)}
@@ -66,11 +72,23 @@ const AboutMe = () => {
                         </li>
                         <li>
                             <h4>Qualification: </h4>
-                            <p>B. Tech </p>
+                            <p>B. Tech (Civil) </p>
                         </li>
                         <li>
                             <h4>Post: </h4>
-                            <p>Full Stact Developer </p>
+                            <p>Full Stack Developer</p>
+                        </li>
+                        <li>
+                            <h4>Exp: </h4>
+                            <p>2+ Years</p>
+                        </li>
+                        <li>
+                            <h4>Company: </h4>
+                            <p>Sharpminds Cloud Tech Pvt Ltd</p>
+                        </li>
+                        <li>
+                            <h4>Location: </h4>
+                            <p>Nirmal, Telangana</p>
                         </li>
                         <li>
                             <h4>Email: </h4>
@@ -87,10 +105,15 @@ const AboutMe = () => {
                     {Stats.map((s, i) => {
                         return (
                             <motion.div variants={fadeIn("left", "tween", (i + 1) * 0.2, 1)} className="progress-bar" key={s.id}>
-                                <h3>{s.skills}</h3>
-                                <div className="progressbar-inputs">
-                                    <input type="range" value={s.percent} />
-                                    <label htmlFor="">{s.percent}%</label>
+                                <h3>{s.skills}<span>{s.percent}%</span></h3>
+                                <div className="progress-track">
+                                    <motion.div
+                                        className="progress-fill"
+                                        initial={{ width: 0 }}
+                                        whileInView={{ width: `${s.percent}%` }}
+                                        viewport={{ once: false, amount: 0.5 }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
                                 </div>
                             </motion.div>
 
@@ -98,7 +121,7 @@ const AboutMe = () => {
                     })}
                 </div>
             </div>
-            <EducationAndExperiance />
+            <EducationExperience />
         </motion.div>
     )
 }

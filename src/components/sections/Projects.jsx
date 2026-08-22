@@ -1,9 +1,9 @@
 import React from 'react'
-import projectsData from '../data/projectsData'
-import ProjectDetails from './ProjectDetails'
+import projectsData from '../../data/projectsData'
+import ProjectCard from './ProjectCard'
 
 
-const projects = () => {
+const Projects = () => {
     return (
         <div id='projects'>
             <h1><span>My</span> Projects</h1>
@@ -11,7 +11,7 @@ const projects = () => {
             <div className="project-container">
                 {projectsData.map((project) => {
                     return (
-                        <ProjectDetails projectsData={project} />
+                        <ProjectCard key={project.id} projectsData={project} />
                     )
                 })}
             </div>
@@ -19,4 +19,4 @@ const projects = () => {
     )
 }
 
-export default projects
+export default Projects

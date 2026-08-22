@@ -1,13 +1,13 @@
-import AboutMe from "./components/aboutMe";
-import Hero from "./components/hero";
-import Left from "./components/left";
+import AboutMe from "./components/sections/AboutMe";
+import Hero from "./components/sections/Hero";
+import Left from "./components/layout/Left";
 import AnimatedCursor from "react-animated-cursor"
-import Services from "./components/services";
-import Contact from "./components/contact";
-import Projects from "./components/projects";
+import Services from "./components/sections/Services";
+import Contact from "./components/sections/Contact";
+import Projects from "./components/sections/Projects";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom"
-import ProjectPage from "./components/projectPage";
+import ProjectPage from "./pages/ProjectPage";
 
 function App() {
 

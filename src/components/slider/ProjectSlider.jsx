@@ -4,7 +4,7 @@ import 'swiper/css';
 import { Autoplay, FreeMode } from 'swiper';
 import { Link } from 'react-router-dom';
 
-const Projectslider = ({ projectsData }) => {
+const ProjectSlider = ({ projectsData }) => {
 
     return (
 
@@ -54,4 +54,4 @@ const Projectslider = ({ projectsData }) => {
     )
 }
 
-export default Projectslider
+export default ProjectSlider

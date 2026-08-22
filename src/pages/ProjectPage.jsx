@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import projectData from "../data/projectsData"
 import { Link } from 'react-router-dom'
+import { AiFillGithub } from "react-icons/ai"
+import { FiExternalLink } from "react-icons/fi"
 
 const ProjectPage = () => {
     const projectId = parseInt(window.location.pathname.split("/")[2])
@@ -23,18 +25,22 @@ const ProjectPage = () => {
                     )
                 })}
             </div>
-            <div className="btns" style={{backgroundColor:"white", padding:"20px", borderRadius:"8px", color:"black"}}>
-                <p>Github :-
-                    <Link to={data.gitHub} target='_blank'style={{color:"blue"}}>
-                        {data.gitHub}
+            <div className="btns">
+                {data.gitHub ? (
+                    <Link to={data.gitHub} target='_blank' rel="noreferrer" className="btn-github">
+                        <AiFillGithub className="btn-icon" />
+                        <span>Github</span>
                     </Link>
-                </p>
-                <p>Live  :-
-                    <Link to={data.liveProject} target='_blank'style={{color:"blue"}}>
-                        {data.liveProject}
-                    </Link>
-                </p>
-
+                ) : (
+                    <span className="btn-github disabled">
+                        <AiFillGithub className="btn-icon" />
+                        <span>Github</span>
+                    </span>
+                )}
+                <Link to={data.liveProject} target='_blank' rel="noreferrer" className="btn-live">
+                    <span>Go Live</span>
+                    <FiExternalLink className="btn-icon" />
+                </Link>
             </div>
         </div>
     )

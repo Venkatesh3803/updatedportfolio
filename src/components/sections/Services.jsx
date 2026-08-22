@@ -1,10 +1,8 @@
 import React from 'react'
-import { SiExpress, SiMongodb, } from "react-icons/si"
-import { IoLogoJavascript } from "react-icons/io"
+import { SiExpress, SiMongodb, SiNextdotjs, SiTypescript } from "react-icons/si"
 import { DiNodejsSmall, DiReact } from "react-icons/di"
-import { ImMobile } from "react-icons/im"
 import { motion } from "framer-motion"
-import { fadeIn, staggerContainer } from '../animations/framermotion'
+import { fadeIn, staggerContainer } from '../../animations/framermotion'
 
 const Services = () => {
     return (
@@ -22,7 +20,7 @@ const Services = () => {
                 className="service-card">
                     <DiNodejsSmall className='icons' />
                     <h3>Node Js</h3>
-                    <p>Developing and maintaining all server-side network components</p>
+                    <p>Building scalable server-side components and REST APIs</p>
                 </motion.div>
                 <motion.div 
                 variants={fadeIn("left", "tween", 0.4, 1)}
@@ -34,30 +32,30 @@ const Services = () => {
                 <motion.div 
                 variants={fadeIn("left", "tween", 0.6, 1)}
                 className="service-card">
-                    <SiExpress className='icons' />
-                    <h3>Express Js</h3>
-                    <p>Roles and Responsibilities Read and process the operational historical data from the existing ed-tech platform</p>
+                    <SiNextdotjs className='icons' />
+                    <h3>Next Js</h3>
+                    <p>Building production-ready, server-side rendered applications</p>
                 </motion.div>
                 <motion.div 
                 variants={fadeIn("left", "tween", 0.8, 1)}
                 className="service-card">
-                    <SiMongodb className='icons' />
-                    <h3>Mongo DB</h3>
-                    <p>maintain MongoDB databases while optimizing the performance, security,</p>
+                    <SiTypescript className='icons' />
+                    <h3>TypeScript</h3>
+                    <p>Writing clean, strongly typed, and reusable code</p>
                 </motion.div>
                 <motion.div 
                 variants={fadeIn("left", "tween", 1, 1)}
                 className="service-card">
-                    <IoLogoJavascript className='icons' />
-                    <h3>Java Script</h3>
-                    <p> Building sustainable coding that may be used in the future. Ensuring the feasibility of UI/UX designs</p>
+                    <SiExpress className='icons' />
+                    <h3>Express Js</h3>
+                    <p>Designing secure and modular REST APIs with clean architecture</p>
                 </motion.div>
                 <motion.div 
                 variants={fadeIn("left", "tween", 1.1, 1)}
                 className="service-card">
-                    <ImMobile className='icons' />
-                    <h3>Web Dev</h3>
-                    <p>Writing well designed, testable, efficient code by using best software development practices </p>
+                    <SiMongodb className='icons' />
+                    <h3>Mongo DB</h3>
+                    <p>Modeling and optimizing databases with aggregation pipelines</p>
                 </motion.div>
             </div>
         </motion.div>
