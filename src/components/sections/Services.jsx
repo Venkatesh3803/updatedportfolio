@@ -1,12 +1,30 @@
 import React from 'react'
 
-const rows = [
-  { name: 'Node.js', icon: '⬢', desc: 'Startup-grade services — layered architecture, validation and error handling you can trust at 5pm on a Friday.', use: 'APIs / Workers' },
-  { name: 'React.js', icon: '◈', desc: 'Ops-friendly UIs — dense tables, filters and flows that factory teams use all day without training.', use: 'Frontend' },
-  { name: 'Next.js', icon: '▲', desc: 'SSR & App Router for fast, reliable web apps — what we used to ship customer-facing surfaces.', use: 'Web Apps' },
-  { name: 'TypeScript', icon: 'TS', desc: 'Strict types across the ERP — shared DTOs that stop inventory bugs before they hit production.', use: 'Everywhere' },
-  { name: 'Express.js', icon: '≋', desc: 'Clean, modular REST APIs with auth and role layers — built to grow with a startup’s scope creep.', use: 'REST APIs' },
-  { name: 'MongoDB', icon: '⬣', desc: 'Schemas, indexes and aggregations that power real ERP reports — not demo dashboards.', use: 'Database' },
+const services = [
+  {
+    num: '01',
+    kicker: 'For factories & ops teams',
+    title: 'ERP parts that can’t be off by one',
+    desc: 'Purchase, quality, inventory — where a count wrong by 1 stops a line. I map the flow on paper first, then build the schema, APIs and reports that the floor team checks at 9am and trusts.',
+    uses: 'Node · TypeScript · Express · MongoDB · Redis · BullMQ',
+    footnote: 'Recently: partial GRN → inspection → stock update that doesn’t double-count. Took a Friday to get right.',
+  },
+  {
+    num: '02',
+    kicker: 'For stores & platforms',
+    title: 'Shops people actually finish buying from',
+    desc: 'Not a demo with fake data. Auth that holds, cart that survives a refresh, filters that make sense. I spend time on the 5 seconds before checkout — that’s where you lose people.',
+    uses: 'MERN · Redux Toolkit · payments-ready flows',
+    footnote: 'Dress Up & We The People — solo, live, not mocked. Cold starts on Render, I warn users.',
+  },
+  {
+    num: '03',
+    kicker: 'For founders & small teams',
+    title: 'Small tools that remove friction',
+    desc: 'The PDF merger I built because I was tired of ad walls. The editor that gets out of your way. One job, done well, works on a cheap Android phone.',
+    uses: 'React · Next.js · good type & speed',
+    footnote: 'PDF Engine — client-side, no upload. Boring UI on purpose.',
+  },
 ]
 
 const Services = () => {
@@ -14,27 +32,53 @@ const Services = () => {
     <section id='services' className="section">
       <div className="section-head reveal">
         <div>
-          <div className="section-label">02 — Stack & Capabilities</div>
-          <h2 className="section-title">What a <em>startup</em> forced me<br />to get good at.</h2>
+          <div className="section-label">02 — What I do</div>
+          <h2 className="section-title">I don’t sell “services.” <em>I ship the boring bit that has to work.</em></h2>
         </div>
-        <p className="section-desc">At a startup you can’t say “that’s not my layer.” Here’s where I’ve had to be solid — backend to frontend.</p>
+        <p className="section-desc">Not a 10-item stack list. Three things people actually call me for — and how I approach them.</p>
       </div>
 
-      <div className="stack-table reveal">
-        {rows.map((r, i) => (
-          <div key={r.name} className={`stack-row reveal ${i % 2 === 0 ? '' : 'reveal-delay-1'}`}>
-            <div className="stack-name">
-              <span className="stack-icon">{r.icon}</span>
-              {r.name}
-            </div>
-            <div className="stack-desc">{r.desc}</div>
-            <div className="stack-use">{r.use}</div>
+      <div className="services-grid">
+        <div className="services-main">
+          {services.map((s, i) => (
+            <article key={s.num} className={`service-card reveal ${i === 1 ? 'reveal-delay-1' : ''} ${i === 2 ? 'service-card--tilt' : ''}`}>
+              <div className="service-top">
+                <span className="service-num">{s.num}</span>
+                <span className="service-kicker">{s.kicker}</span>
+              </div>
+              <h3>{s.title}</h3>
+              <p className="service-desc">{s.desc}</p>
+              <div className="service-uses">{s.uses}</div>
+              <div className="service-note">→ {s.footnote}</div>
+            </article>
+          ))}
+        </div>
+
+        <aside className="services-side reveal reveal-delay-1">
+          <div className="side-card side-card--process">
+            <h4>How I work — really</h4>
+            <ol className="process-list">
+              <li><b>Listen & sketch</b><span>30-min call. I draw your flow back to you on paper. If I can’t, I don’t code yet.</span></li>
+              <li><b>Slice thin</b><span>Smallest shippable step, not a 3-month spec. You see it live in days.</span></li>
+              <li><b>Ship & stay</b><span>PR with tests & rollback note. Then I stick around when real users hit it.</span></li>
+            </ol>
+            <p className="side-small">If I’m not a fit, I’ll say it on that first call. Waste of both our time otherwise.</p>
           </div>
-        ))}
+
+          <div className="side-card">
+            <h4>Tools I reach for</h4>
+            <div className="side-tags">
+              <span>Node.js</span><span>TypeScript</span><span>Express</span><span>React</span><span>Next.js</span><span>MongoDB</span><span>Redis</span><span>BullMQ</span><span>Tailwind</span><span>Git</span>
+            </div>
+            <p className="side-small" style={{ marginTop: 10 }}>Not buzzwords. Things I’ve fixed at 5pm and shipped at 6pm.</p>
+          </div>
+
+          <div className="side-card side-card--quote">
+            <p>“At a factory, a bug isn’t a vibe — it stops work. That keeps me honest.”</p>
+            <span>— my notebook, after a long Friday</span>
+          </div>
+        </aside>
       </div>
-      <p style={{ marginTop: 12, fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.70rem', color: '#8C8C88', letterSpacing: '0.04em' }}>
-        Startup glue: Redis (caching), BullMQ (queues), Tailwind, Git, Vercel/Render. Learned on the job because the startup needed it yesterday.
-      </p>
     </section>
   )
 }

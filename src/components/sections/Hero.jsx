@@ -6,48 +6,54 @@ const Hero = () => {
   return (
     <div id='hero'>
       <div className="hero-left">
-        <div className="eyebrow">Early engineering at Sharpminds Cloud Tech — ERP startup · Aug 2024 → Present</div>
+        <div className="eyebrow">Sharpminds Cloud Tech  ·  early engineer, Aug 2024 — now  ·  remote from Nirmal</div>
 
         <h1 className="hero-title">
-          Helped build an <em>ERP startup</em><br />
-          from <strong>first commit to<br />factory floor.</strong>
+          I joined an <em>ERP startup</em> early<br />
+          and <strong>stayed to ship it<br />to factory floors.</strong>
         </h1>
 
         <p className="hero-lead">
-          I’m <strong>Chanda Venkatesh</strong> — one of the early engineers at <strong>Sharpminds Cloud Tech</strong>, where we’re building an ERP from scratch for real manufacturing operations.
-          In 2 years we went from whiteboard to live product powering <strong>Purchase, Quality and Sales & Inventory</strong> — with real users, real data, real edge cases.
-          I work across <strong>Node.js / TypeScript / React / Next.js / MongoDB</strong> — plus Redis & BullMQ — doing the startup thing: architecture in the morning, performance fix at noon, customer call in between.
+          Hey — I'm <strong>Venkatesh</strong>. Civil grad who fell into code and didn't look back.
+          For the last two years I've been one of the first engineers at <strong>Sharpminds Cloud Tech</strong>, building an ERP that factories actually use every day.
+          We started with a blank repo. Now <strong>Purchase, Quality and Sales & Inventory</strong> run live for real teams, with real stock, real mistakes, and real “we need this yesterday” calls.
+          I mostly live in <strong>Node / TypeScript / React / Next / MongoDB</strong> — plus Redis and BullMQ when things need to be fast or not break at 5pm.
+        </p>
+
+        <p className="hero-lead" style={{ fontSize: '0.94rem', color: '#6A6A66', marginTop: '-8px' }}>
+          What that means day-to-day: drawing a flow on paper in the morning, writing the API after lunch, and fixing something on prod before dinner because a customer is waiting. I like that loop.
         </p>
 
         <div className="hero-actions">
-          <a href="#projects" className="btn-primary-old">View selected work →</a>
-          <a href="#contact" className="btn-ghost">Start a conversation</a>
+          <a href="#projects" className="btn-primary-old">See what I shipped →</a>
+          <a href="#contact" className="btn-ghost">Talk to me</a>
         </div>
 
         <div className="hero-meta-row">
-          <div className="meta-stat"><b>2 yrs</b><span>Building a startup ERP</span></div>
-          <div className="meta-stat"><b>0 → 1</b><span>Startup journey</span></div>
-          <div className="meta-stat"><b>03</b><span>Core modules owned</span></div>
-          <div className="meta-stat"><b>15+</b><span>Products & features shipped</span></div>
+          <div className="meta-stat"><b>2 years</b><span>in one product</span></div>
+          <div className="meta-stat"><b>0 → live</b><span>blank repo to factory</span></div>
+          <div className="meta-stat"><b>3</b><span>modules I own end-to-end</span></div>
+          <div className="meta-stat"><b>~real users</b><span>not demo data</span></div>
         </div>
       </div>
 
       <div className="hero-right">
         <div className="portrait-wrap">
-          <div className="portrait-badge"><span className="dot-live"></span> Open to work</div>
+          <div className="portrait-badge"><span className="dot-live"></span> Open to new work</div>
           <img src={profilePic} alt="Chanda Venkatesh" />
           
         </div>
 
         <div className="info-card">
           <div>
-            <h4>Contact</h4>
+            <h4>Reach me</h4>
             <p><a href="mailto:venkateshvnky3803@gmail.com">venkateshvnky3803@gmail.com</a></p>
             <p style={{ marginTop: 4 }}><a href="tel:+918463944069">+91 84639 44069</a></p>
           </div>
           <div>
-            <h4>Currently</h4>
-            <p>Early Engineer<br /><span style={{ color: '#5A5A58', fontSize: '0.82rem' }}>Sharpminds Cloud Tech — ERP Startup (Remote)</span></p>
+            <h4>Right now</h4>
+            <p>Early Engineer<br /><span style={{ color: '#5A5A58', fontSize: '0.82rem' }}>Sharpminds Cloud Tech — ERP (Remote)</span></p>
+            <p style={{ color: '#8C8C88', fontSize: '0.78rem', marginTop: 4 }}>Nirmal, Telangana</p>
           </div>
           <div style={{ gridColumn: 'span 2', borderTop: '1px solid #E5DDCB', paddingTop: 12, marginTop: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
             <div style={{ display: 'flex', gap: 8 }} className="social-row">
@@ -55,7 +61,7 @@ const Hero = () => {
               <a href="https://github.com/Venkatesh3803" target="_blank" rel="noreferrer" aria-label="GitHub"><AiFillGithub /></a>
               <a href="mailto:venkateshvnky3803@gmail.com" aria-label="Email"><AiFillMail /></a>
             </div>
-            <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.66rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#8C8C88' }}>Resume on request →</span>
+            <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.66rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#8C8C88' }}>CV on request →</span>
           </div>
         </div>
       </div>
