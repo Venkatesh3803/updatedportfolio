@@ -1,129 +1,78 @@
 import React from 'react'
 import EducationExperience from './EducationExperience'
-import { motion } from "framer-motion"
-import { fadeIn, staggerContainer } from '../../animations/framermotion'
-
 import resume from "../../assets/resume/resume.pdf"
 
 const AboutMe = () => {
+  return (
+    <section id='about-me' className="section">
+      <div className="section-head reveal">
+        <div>
+          <div className="section-label">01 — About</div>
+          <h2 className="section-title">Startup engineer, <em>not just a coder.</em></h2>
+        </div>
+        <p className="section-desc">Joined an ERP startup early. Learned what it takes to turn an idea into software factories actually trust.</p>
+      </div>
 
-    const Stats = [
-        {
-            skills: "REACT JS",
-            percent: 88
-        },
-        {
-            skills: "NEXT JS",
-            percent: 82
-        },
-        {
-            skills: "TYPE SCRIPT",
-            percent: 85
-        },
-        {
-            skills: "NODE JS",
-            percent: 90
-        },
-        {
-            skills: "EXPRESS JS",
-            percent: 86
-        },
-        {
-            skills: "MONGO DB",
-            percent: 85
-        },
-        {
-            skills: "REDIS",
-            percent: 78
-        },
-        {
-            skills: "TAILWIND CSS",
-            percent: 80
-        },
-    ]
+      <div className="about-grid reveal">
+        <div className="about-copy">
+          <p>
+            I came from Civil Engineering because I liked <strong>systems with constraints</strong> — loads, tolerances, budgets. Building a startup ERP is the same, only the users are factory teams and a bug stops production.
+          </p>
+          <p>
+            I joined <strong>Sharpminds Cloud Tech</strong> early (Aug 2024 — Present, Remote) when the ERP was still an idea. 2 years later we have a live platform running <strong>Purchase, Quality and Sales & Inventory</strong> for real operations. At a startup you don’t just “build modules” — you <strong>own the product</strong>: schema & aggregation design in MongoDB, typed REST APIs with Node/TypeScript/Express, Redis + BullMQ for speed and background jobs, and React/Next UIs that have to be fast for non-technical ops staff.
+          </p>
+          <p>
+            That means product calls, shaping specs from customer feedback, making architecture trade-offs with a tiny team, and fixing production at 6pm because a customer is live. It’s taught me to write <strong>boring, testable code</strong> over clever code.
+          </p>
+          <p style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.78rem', letterSpacing: '0.04em', color: '#8C8C88', borderLeft: '2px solid #D94F30', paddingLeft: 12, marginTop: 16 }}>
+            “My PRs come with tests, docs and a rollback note. At a startup, you learn that fast.”
+          </p>
+        </div>
 
+        <div>
+          <div className="detail-table">
+            <div className="detail-row"><dt>Name</dt><dd>Chanda Venkatesh</dd></div>
+            <div className="detail-row"><dt>Role</dt><dd>Early Full Stack Engineer</dd></div>
+            <div className="detail-row"><dt>Company</dt><dd>Sharpminds Cloud Tech — ERP Startup</dd></div>
+            <div className="detail-row"><dt>Location</dt><dd>Nirmal, Telangana — Remote</dd></div>
+            <div className="detail-row"><dt>Email</dt><dd>venkateshvnky3803@gmail.com</dd></div>
+            <div className="detail-row"><dt>Phone</dt><dd>+91 84639 44069</dd></div>
+            <div className="detail-row"><dt>Degree</dt><dd>B.Tech Civil — MIST, Hyderabad</dd></div>
+          </div>
+          <a href={resume} download="Chanda-Venkatesh-Resume.pdf" style={{ display: 'block', textDecoration: 'none' }}>
+            <button className="btn-download">Download résumé — PDF ↓</button>
+          </a>
+        </div>
+      </div>
 
-    const handleResume = (e) => {
-        const resumePath = resume;
-        const link = document.createElement('a');
-        link.href = resumePath;
-        link.download = "venkatesh-resume.pdf";
+      <div className="skills-wrap reveal reveal-delay-1" style={{ marginTop: 32 }}>
+          <div className="skills-group">
+          <h4>What the startup made me ship with</h4>
+          <div className="tag-cloud">
+            <span className="tag">Node.js <small>— APIs / services</small></span>
+            <span className="tag">TypeScript <small>— strict</small></span>
+            <span className="tag">Express.js <small>— REST</small></span>
+            <span className="tag">React.js <small>— UI</small></span>
+            <span className="tag">Next.js <small>— SSR / App Router</small></span>
+            <span className="tag">MongoDB <small>— aggregations</small></span>
+          </div>
+        </div>
+        <div className="skills-group">
+          <h4>Startup glue — infra & product</h4>
+          <div className="tag-cloud">
+            <span className="tag">Redis <small>— cache</small></span>
+            <span className="tag">BullMQ <small>— queues</small></span>
+            <span className="tag">Tailwind CSS</span>
+            <span className="tag">Git / GitHub</span>
+            <span className="tag">REST design</span>
+            <span className="tag">Deployment — Vercel / Render</span>
+          </div>
+        </div>
+      </div>
 
-        link.click()
-
-    }
-
-    return (
-        <motion.div id='about-me'
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}>
-            <h1>About <span>Me</span></h1>
-            <p>Full Stack Developer with 2+ years of experience building enterprise ERP applications using Node.js, Express.js, React.js, Next.js, TypeScript, and MongoDB. Skilled in designing secure REST APIs, optimizing performance with Redis and BullMQ, and delivering production-ready Purchase, Quality, and Sales & Inventory modules.</p>
-            <div className="about-container">
-                <motion.div
-                    variants={fadeIn("right", "tween", 0.5, 1)}
-                    className="about-left">
-                    <ul>
-                        <li>
-                            <h4>Name: </h4>
-                            <p>Chanda Venkatesh </p>
-                        </li>
-                        <li>
-                            <h4>Qualification: </h4>
-                            <p>B. Tech (Civil) </p>
-                        </li>
-                        <li>
-                            <h4>Post: </h4>
-                            <p>Full Stack Developer</p>
-                        </li>
-                        <li>
-                            <h4>Exp: </h4>
-                            <p>2+ Years</p>
-                        </li>
-                        <li>
-                            <h4>Company: </h4>
-                            <p>Sharpminds Cloud Tech Pvt Ltd</p>
-                        </li>
-                        <li>
-                            <h4>Location: </h4>
-                            <p>Nirmal, Telangana</p>
-                        </li>
-                        <li>
-                            <h4>Email: </h4>
-                            <p>venkateshvnky3803@gmail.com </p>
-                        </li>
-                        <li>
-                            <h4>Phone: </h4>
-                            <p>+91 8463944069 </p>
-                        </li>
-                        <button onClick={handleResume}>Download Resume</button>
-                    </ul>
-                </motion.div>
-                <div className="about-right">
-                    {Stats.map((s, i) => {
-                        return (
-                            <motion.div variants={fadeIn("left", "tween", (i + 1) * 0.2, 1)} className="progress-bar" key={s.id}>
-                                <h3>{s.skills}<span>{s.percent}%</span></h3>
-                                <div className="progress-track">
-                                    <motion.div
-                                        className="progress-fill"
-                                        initial={{ width: 0 }}
-                                        whileInView={{ width: `${s.percent}%` }}
-                                        viewport={{ once: false, amount: 0.5 }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
-                                    />
-                                </div>
-                            </motion.div>
-
-                        )
-                    })}
-                </div>
-            </div>
-            <EducationExperience />
-        </motion.div>
-    )
+      <EducationExperience />
+    </section>
+  )
 }
 
 export default AboutMe

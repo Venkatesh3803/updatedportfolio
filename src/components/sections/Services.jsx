@@ -1,65 +1,42 @@
 import React from 'react'
-import { SiExpress, SiMongodb, SiNextdotjs, SiTypescript } from "react-icons/si"
-import { DiNodejsSmall, DiReact } from "react-icons/di"
-import { motion } from "framer-motion"
-import { fadeIn, staggerContainer } from '../../animations/framermotion'
+
+const rows = [
+  { name: 'Node.js', icon: '⬢', desc: 'Startup-grade services — layered architecture, validation and error handling you can trust at 5pm on a Friday.', use: 'APIs / Workers' },
+  { name: 'React.js', icon: '◈', desc: 'Ops-friendly UIs — dense tables, filters and flows that factory teams use all day without training.', use: 'Frontend' },
+  { name: 'Next.js', icon: '▲', desc: 'SSR & App Router for fast, reliable web apps — what we used to ship customer-facing surfaces.', use: 'Web Apps' },
+  { name: 'TypeScript', icon: 'TS', desc: 'Strict types across the ERP — shared DTOs that stop inventory bugs before they hit production.', use: 'Everywhere' },
+  { name: 'Express.js', icon: '≋', desc: 'Clean, modular REST APIs with auth and role layers — built to grow with a startup’s scope creep.', use: 'REST APIs' },
+  { name: 'MongoDB', icon: '⬣', desc: 'Schemas, indexes and aggregations that power real ERP reports — not demo dashboards.', use: 'Database' },
+]
 
 const Services = () => {
-    return (
-        <motion.div id='services'
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
-        >
-            <h1><span>Known</span> Technologies</h1>
+  return (
+    <section id='services' className="section">
+      <div className="section-head reveal">
+        <div>
+          <div className="section-label">02 — Stack & Capabilities</div>
+          <h2 className="section-title">What a <em>startup</em> forced me<br />to get good at.</h2>
+        </div>
+        <p className="section-desc">At a startup you can’t say “that’s not my layer.” Here’s where I’ve had to be solid — backend to frontend.</p>
+      </div>
 
-            <div className="service-container">
-                <motion.div 
-                variants={fadeIn("left", "tween", 0.2, 1)}
-                className="service-card">
-                    <DiNodejsSmall className='icons' />
-                    <h3>Node Js</h3>
-                    <p>Building scalable server-side components and REST APIs</p>
-                </motion.div>
-                <motion.div 
-                variants={fadeIn("left", "tween", 0.4, 1)}
-                className="service-card">
-                    <DiReact className='icons' />
-                    <h3>React Js</h3>
-                    <p> Developing dynamic and user-friendly interfaces</p>
-                </motion.div>
-                <motion.div 
-                variants={fadeIn("left", "tween", 0.6, 1)}
-                className="service-card">
-                    <SiNextdotjs className='icons' />
-                    <h3>Next Js</h3>
-                    <p>Building production-ready, server-side rendered applications</p>
-                </motion.div>
-                <motion.div 
-                variants={fadeIn("left", "tween", 0.8, 1)}
-                className="service-card">
-                    <SiTypescript className='icons' />
-                    <h3>TypeScript</h3>
-                    <p>Writing clean, strongly typed, and reusable code</p>
-                </motion.div>
-                <motion.div 
-                variants={fadeIn("left", "tween", 1, 1)}
-                className="service-card">
-                    <SiExpress className='icons' />
-                    <h3>Express Js</h3>
-                    <p>Designing secure and modular REST APIs with clean architecture</p>
-                </motion.div>
-                <motion.div 
-                variants={fadeIn("left", "tween", 1.1, 1)}
-                className="service-card">
-                    <SiMongodb className='icons' />
-                    <h3>Mongo DB</h3>
-                    <p>Modeling and optimizing databases with aggregation pipelines</p>
-                </motion.div>
+      <div className="stack-table reveal">
+        {rows.map((r, i) => (
+          <div key={r.name} className={`stack-row reveal ${i % 2 === 0 ? '' : 'reveal-delay-1'}`}>
+            <div className="stack-name">
+              <span className="stack-icon">{r.icon}</span>
+              {r.name}
             </div>
-        </motion.div>
-    )
+            <div className="stack-desc">{r.desc}</div>
+            <div className="stack-use">{r.use}</div>
+          </div>
+        ))}
+      </div>
+      <p style={{ marginTop: 12, fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.70rem', color: '#8C8C88', letterSpacing: '0.04em' }}>
+        Startup glue: Redis (caching), BullMQ (queues), Tailwind, Git, Vercel/Render. Learned on the job because the startup needed it yesterday.
+      </p>
+    </section>
+  )
 }
 
 export default Services

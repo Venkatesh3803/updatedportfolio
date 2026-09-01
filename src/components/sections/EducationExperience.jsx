@@ -1,84 +1,45 @@
 import React from 'react'
-import { motion } from "framer-motion"
-import { fadeIn, staggerContainer } from '../../animations/framermotion'
+
 const EducationExperience = () => {
+  return (
+    <div className='edu-grid reveal'>
+      <div className="edu-col reveal">
+        <h3>Experience</h3>
+        <div className="timeline-item">
+          <h4>Sharpminds Cloud Tech Pvt Ltd — ERP Startup</h4>
+          <div className="meta">Early Full Stack Engineer — Remote · Aug 2024 → Present</div>
+          <p>Joined as early engineering to build the ERP from 0 → 1. Now live with <strong>Purchase, Quality, Sales & Inventory</strong> powering real factory workflows.</p>
+          <p style={{ marginTop: 6 }}>What I owned as a startup engineer:</p>
+          <p>• Architecture & schema design for multi-module ERP — not just CRUD, but inventory logic that can’t drift<br />• Typed REST APIs (Node/TS/Express), Redis caching & BullMQ background jobs for scale<br />• MongoDB aggregations for reporting that Ops actually reads<br />• Direct customer feedback → spec → ship → iterate loops with a tiny team</p>
+          <p style={{ marginTop: 8, fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.72rem', color: '#5A5A58' }}>→ Startup reality: product + engineering + support in one role. Stack: Node + TS + Express + Mongo + Redis + BullMQ + React/Next</p>
+        </div>
+        <div className="timeline-item">
+          <h4>Independent — Product builds (pre-startup)</h4>
+          <div className="meta">MERN builds · 2023 → 2024</div>
+          <p>Shipped Dress Up (MERN + Redux), We The People (crowdfunding), WriteWave (blogging), PDF Engine — all live, authenticated, responsive. That’s where I learned to ship solo before shipping as a team.</p>
+        </div>
+      </div>
 
-    const education = [
-        {
-            id: 1,
-            college: "Mahaveer Institute of Science and Technology",
-            location: " Hyderabad, Telangana",
-            course: "B.Tech - Civil Engineering",
-        },
-        {
-            id: 2,
-            college: "Narayana Junior College",
-            location: " Madinaguda, Hyderabad",
-            course: "Intermediate (MPC)",
-        },
-    ]
-
-
-    return (
-        <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
-
-            className='education'>
-            <div className="edu-container">
-                <motion.div
-                    variants={fadeIn("right", "tween", 0.5, 1)}
-                    className="edu-left">
-                    <h2>Education</h2>
-                    {education.map((e) => {
-                        return (
-                            <div className="edu-card">
-                                <div className="vl"></div>
-                                <div className="dot"></div>
-                                <div className="edu-info">
-                                    <h3>{e.college}</h3>
-                                    <h4 style={{ color: "gray" }}>{e.location}</h4>
-                                    <p>Course : {e.course}</p>
-                                </div>
-                            </div>
-                        )
-                    })}
-
-                </motion.div>
-                <motion.div
-                    variants={fadeIn("left", "tween", 0.5, 1)}
-                    className="edu-right">
-                    <h2>Work Experience</h2>
-                    <div className="edu-card">
-                        <div className="vl"></div>
-                        <div className="dot"></div>
-                        <div className="edu-info">
-                            <h3>Sharpminds Cloud Tech Pvt Ltd</h3>
-                            <span className="exp-period">Aug 2024 - Present</span>
-                            <h4 style={{ color: "gray" }}>Full Stack Developer (Remote)</h4>
-                            <p>Developing and maintaining enterprise-grade Purchase, Quality, and Sales & Inventory Management modules for a production ERP platform.</p>
-                            <p>• Designing scalable REST APIs with Node.js, Express.js & TypeScript</p>
-                            <p>• Implementing Redis caching & BullMQ background jobs for performance</p>
-                            <p>• Optimizing MongoDB queries & aggregation pipelines</p>
-                        </div>
-                    </div>
-
-                    <h2 className="edu-sub">Certifications</h2>
-                    <div className="edu-card">
-                        <div className="vl"></div>
-                        <div className="dot"></div>
-                        <div className="edu-info">
-                            <h3>upGrad</h3>
-                            <span className="exp-period">Feb 2023 - Oct 2023</span>
-                            <p>Full Stack Development Bootcamp (JavaScript)</p>
-                        </div>
-                    </div>
-                </motion.div>
-            </div>
-        </motion.div>
-    )
+      <div className="edu-col reveal reveal-delay-1">
+        <h3>Education & Certs</h3>
+        <div className="timeline-item">
+          <h4>Mahaveer Institute of Science and Technology</h4>
+          <div className="meta">B.Tech — Civil Engineering · Hyderabad</div>
+          <p>Systems thinking, structures and project management — still useful when modelling ERP domain logic.</p>
+        </div>
+        <div className="timeline-item">
+          <h4>Narayana Junior College, Hyderabad</h4>
+          <div className="meta">Intermediate — MPC · Madinaguda</div>
+          <p>Maths / Physics / Chemistry foundation.</p>
+        </div>
+        <div className="timeline-item">
+          <h4>upGrad — Full Stack Bootcamp</h4>
+          <div className="meta">Feb 2023 → Oct 2023</div>
+          <p>JavaScript ecosystem: React, Node, Express, Mongo — project-based.</p>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default EducationExperience

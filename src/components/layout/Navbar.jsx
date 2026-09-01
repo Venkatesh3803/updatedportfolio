@@ -1,55 +1,59 @@
-import React from 'react'
-import profilePic from "../../assets/images/Screenshot_2020-09-07-12-32-36-259_com.whatsapp-removebg-preview.png"
-import { MdCancel } from "react-icons/md"
-import { AiOutlineHome, AiOutlineUser, AiOutlineAppstore, AiOutlineFolderOpen, AiOutlineMail, AiFillGithub, AiFillLinkedin } from "react-icons/ai"
+import React, { useState, useEffect } from 'react'
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
 
-const Navbar = ({ setActive, active }) => {
-    return (
-        <div className="navber">
-            {active && <MdCancel onClick={() => setActive(false)} className='cancel-icon' />}
+const Navbar = () => {
+  const [open, setOpen] = useState(false)
 
-            <div className="profile">
-                <div className="avatar-wrapper">
-                    <img src={profilePic} alt="Chanda Venkatesh" />
-                    <span className="status-indicator" title="Available for hire"></span>
-                </div>
-                <h2>Chanda Venkatesh</h2>
-                <span className="role-badge">Full Stack Developer</span>
-            </div>
+  // lock scroll when menu open (overlay, no content push)
+  useEffect(() => {
+    if (open) document.body.style.overflow = 'hidden'
+    else document.body.style.overflow = ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
 
-            <div className="links">
-                <ul>
-                    <a href="#hero" onClick={() => setActive && setActive(false)}>
-                        <li><AiOutlineHome className="nav-icon" /> <span>Home</span></li>
-                    </a>
-                    <a href="#about-me" onClick={() => setActive && setActive(false)}>
-                        <li><AiOutlineUser className="nav-icon" /> <span>About Me</span></li>
-                    </a>
-                    <a href="#services" onClick={() => setActive && setActive(false)}>
-                        <li><AiOutlineAppstore className="nav-icon" /> <span>Services</span></li>
-                    </a>
-                    <a href="#projects" onClick={() => setActive && setActive(false)}>
-                        <li><AiOutlineFolderOpen className="nav-icon" /> <span>Projects</span></li>
-                    </a>
-                    <a href="#contact" onClick={() => setActive && setActive(false)}>
-                        <li><AiOutlineMail className="nav-icon" /> <span>Contact</span></li>
-                    </a>
-                </ul>
-            </div>
+  // close on resize to desktop
+  useEffect(() => {
+    const onResize = () => { if (window.innerWidth > 860 && open) setOpen(false) }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [open])
 
-            <div className="sidebar-footer">
-                <div className="sidebar-socials">
-                    <a href="https://github.com/Venkatesh3803" target="_blank" rel="noreferrer" title="GitHub">
-                        <AiFillGithub />
-                    </a>
-                    <a href="https://www.linkedin.com/in/chanda-venkatesh-705154247" target="_blank" rel="noreferrer" title="LinkedIn">
-                        <AiFillLinkedin />
-                    </a>
-                </div>
-                <p>© {new Date().getFullYear()} Venkatesh</p>
-            </div>
+  return (
+    <nav className="site-nav">
+      <div className="site-nav-inner">
+        <div className="nav-left">
+          <div className="nav-mark">CV</div>
+          <div className="nav-wordmark">Chanda <span>Venkatesh</span></div>
+          <div className="nav-meta">
+            <span>Full-stack Developer</span>
+            <span>EST. 2023 — Nirmal, IN</span>
+          </div>
         </div>
-    )
+
+        <ul className="nav-links">
+          <li><a href="#about-me">About</a></li>
+          <li><a href="#services">Stack</a></li>
+          <li><a href="#projects">Projects — 05</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="mailto:venkateshvnky3803@gmail.com?subject=Opportunity%20for%20Chanda%20Venkatesh" className="nav-cta">Hire Me →</a>
+
+        <button className="nav-hamburger" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
+          {open ? <AiOutlineClose /> : <AiOutlineMenu />}
+        </button>
+      </div>
+
+      <div className={`mobile-backdrop ${open ? 'open' : ''}`} onClick={() => setOpen(false)} aria-hidden="true" />
+      <div className={`mobile-menu ${open ? 'open' : ''}`} role="dialog" aria-modal="true">
+        <a href="#about-me" onClick={() => setOpen(false)}>About</a>
+        <a href="#services" onClick={() => setOpen(false)}>Stack</a>
+        <a href="#projects" onClick={() => setOpen(false)}>Projects</a>
+        <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
+        <a href="mailto:venkateshvnky3803@gmail.com" onClick={() => setOpen(false)}>venkateshvnky3803@gmail.com</a>
+      </div>
+    </nav>
+  )
 }
 
 export default Navbar

@@ -1,98 +1,66 @@
 import React from 'react'
-import { AiFillLinkedin, AiFillInstagram, AiFillGithub, AiOutlineMenu, AiOutlineArrowRight } from "react-icons/ai"
-import { TypeAnimation } from 'react-type-animation'
-import { motion } from "framer-motion"
-import { HeroSection } from '../../animations/framermotion'
-import { Link } from 'react-router-dom'
+import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai"
+import profilePic from "../../assets/images/Screenshot_2020-09-07-12-32-36-259_com.whatsapp-removebg-preview.png"
 
-const Hero = ({ setActive, active }) => {
-    return (
-        <div id='hero'>
-            <motion.div
-                variants={HeroSection}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.25 }}
-                className="info">
-                <AiOutlineMenu onClick={() => setActive(!active)} className="menu-icon" />
+const Hero = () => {
+  return (
+    <div id='hero'>
+      <div className="hero-left">
+        <div className="eyebrow">Early engineering at Sharpminds Cloud Tech — ERP startup · Aug 2024 → Present</div>
 
-                <div className="hero-badge">
-                    <span className="pulse-dot"></span>
-                    <span>Available for Full-Time & Freelance Roles</span>
-                </div>
+        <h1 className="hero-title">
+          Helped build an <em>ERP startup</em><br />
+          from <strong>first commit to<br />factory floor.</strong>
+        </h1>
 
-                <h3 className="greeting">Hello & Welcome! 👋</h3>
-                <h1>I'm Chanda <span className="highlight-name">Venkatesh</span></h1>
-                <h2 className="type-container">I build <TypeAnimation
-                    sequence={[
-                        'Enterprise ERP Applications',
-                        1500,
-                        'Scalable REST APIs',
-                        1500,
-                        'Modern MERN Solutions',
-                        1500,
-                        'Interactive Web Experiences',
-                        1500
-                    ]}
-                    wrapper="span"
-                    cursor={true}
-                    repeat={Infinity}
-                    className="type-text"
-                />
-                </h2>
+        <p className="hero-lead">
+          I’m <strong>Chanda Venkatesh</strong> — one of the early engineers at <strong>Sharpminds Cloud Tech</strong>, where we’re building an ERP from scratch for real manufacturing operations.
+          In 2 years we went from whiteboard to live product powering <strong>Purchase, Quality and Sales & Inventory</strong> — with real users, real data, real edge cases.
+          I work across <strong>Node.js / TypeScript / React / Next.js / MongoDB</strong> — plus Redis & BullMQ — doing the startup thing: architecture in the morning, performance fix at noon, customer call in between.
+        </p>
 
-                <p className="hero-bio">
-                    Results-driven <strong>Full Stack Developer</strong> with <strong>2+ years</strong> of experience building enterprise ERP applications at <strong>Sharpminds Cloud Tech Pvt Ltd</strong>. Specializing in <strong>Node.js, React.js, Next.js, TypeScript,</strong> and <strong>MongoDB</strong> — with Redis caching, queue management, and scalable API design.
-                </p>
-
-                <div className="hero-cta-group">
-                    <a href="#projects" className="btn btn-primary">
-                        <span>View Projects</span>
-                        <AiOutlineArrowRight className="btn-icon" />
-                    </a>
-                    <a href="#contact" className="btn btn-secondary">
-                        <span>Contact Me</span>
-                    </a>
-                </div>
-
-                <div className="hero-stats">
-                    <div className="stat-card">
-                        <h4>2+</h4>
-                        <p>Years Experience</p>
-                    </div>
-                    <div className="stat-card">
-                        <h4>15+</h4>
-                        <p>Projects Built</p>
-                    </div>
-                    <div className="stat-card">
-                        <h4>MERN</h4>
-                        <p>+ TypeScript Stack</p>
-                    </div>
-                </div>
-
-                <div className="social-media">
-                    <span className="social-title">Connect with me:</span>
-                    <div className="social-icons-wrapper">
-                        <Link to={"https://www.linkedin.com/in/chanda-venkatesh-705154247"} target='_blank' aria-label="LinkedIn">
-                            <div className="social-links linkedin-link">
-                                <AiFillLinkedin size={22} />
-                            </div>
-                        </Link>
-                        <Link to={"https://github.com/Venkatesh3803"} target='_blank' aria-label="GitHub">
-                            <div className="social-links github-link">
-                                <AiFillGithub size={22} />
-                            </div>
-                        </Link>
-                        <Link to={"https://www.instagram.com/venkat_venky3803/"} target='_blank' aria-label="Instagram">
-                            <div className="social-links instagram-link">
-                                <AiFillInstagram size={22} />
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-            </motion.div>
+        <div className="hero-actions">
+          <a href="#projects" className="btn-primary-old">View selected work →</a>
+          <a href="#contact" className="btn-ghost">Start a conversation</a>
         </div>
-    )
+
+        <div className="hero-meta-row">
+          <div className="meta-stat"><b>2 yrs</b><span>Building a startup ERP</span></div>
+          <div className="meta-stat"><b>0 → 1</b><span>Startup journey</span></div>
+          <div className="meta-stat"><b>03</b><span>Core modules owned</span></div>
+          <div className="meta-stat"><b>15+</b><span>Products & features shipped</span></div>
+        </div>
+      </div>
+
+      <div className="hero-right">
+        <div className="portrait-wrap">
+          <div className="portrait-badge"><span className="dot-live"></span> Open to work</div>
+          <img src={profilePic} alt="Chanda Venkatesh" />
+          
+        </div>
+
+        <div className="info-card">
+          <div>
+            <h4>Contact</h4>
+            <p><a href="mailto:venkateshvnky3803@gmail.com">venkateshvnky3803@gmail.com</a></p>
+            <p style={{ marginTop: 4 }}><a href="tel:+918463944069">+91 84639 44069</a></p>
+          </div>
+          <div>
+            <h4>Currently</h4>
+            <p>Early Engineer<br /><span style={{ color: '#5A5A58', fontSize: '0.82rem' }}>Sharpminds Cloud Tech — ERP Startup (Remote)</span></p>
+          </div>
+          <div style={{ gridColumn: 'span 2', borderTop: '1px solid #E5DDCB', paddingTop: 12, marginTop: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+            <div style={{ display: 'flex', gap: 8 }} className="social-row">
+              <a href="https://www.linkedin.com/in/chanda-venkatesh-705154247" target="_blank" rel="noreferrer" aria-label="LinkedIn"><AiFillLinkedin /></a>
+              <a href="https://github.com/Venkatesh3803" target="_blank" rel="noreferrer" aria-label="GitHub"><AiFillGithub /></a>
+              <a href="mailto:venkateshvnky3803@gmail.com" aria-label="Email"><AiFillMail /></a>
+            </div>
+            <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.66rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#8C8C88' }}>Resume on request →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Hero
